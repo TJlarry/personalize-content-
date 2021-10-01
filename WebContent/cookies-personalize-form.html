@@ -1,23 +1,42 @@
 <html>
 <head>
-<title> Personalize the site</title> 
+<meta charset="ISO-8859-1">
+<meta name="author" content="Lanre Allioke">
+<meta name="description" content="Personalized Form">
+<title>Personalize the site</title>
+<style type="text/css">
+body {
+	background-color: lightgrey;
+	text-align: left;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049
+}
+
+input[type=submit] {
+	width: 100%;
+	background-color: #4CAF50;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+</style>
 </head>
 <body>
+	<form action="cookies-personalize-response.jsp">
+		Select your favorite programming language: 
+		<select
+			name="favoriteLanguage">
+			<option>Java</option>
+			<option>C#</option>
+			<option>PHP</option>
+			<option>Ruby</option>
+		</select> <br /> <br /> 
+		<input type="submit" value="Submit">
 
-<form  action ="cookies-personalize-response.jsp">
-Select your favorite programming language:
-<select name="favoriteLanguage">
-    <option> Java</option>
-    <option>C#</option>
-    <option>PHP</option>
-    <option>Ruby</option>
-    </select>
-    
-    <br/><br/>
-    <input type="submit" value="Submit">
-
-</form>
-
+	</form>
 </body>
-
 </html>
