@@ -1,4 +1,7 @@
 <html>
+<head>
+
+</head>
 
 <body> 
 
@@ -12,24 +15,36 @@ String favlang = "Java";
 Cookie[] theCookie = request.getCookies();
 // find the favorite language cookies
 if ( theCookie != null){
-	
-	
-	 for(Cookie tempcookie: theCookie){
+	for(Cookie tempcookie: theCookie){
 		 if("myApp.favoriteLanguage".equals(tempcookie.getName())){
-			 
-			 
-		 }
-		 
-		 
-		 
-		 
+			favlang = tempcookie.getName(); 
+			break;
+		 }	 
 	 }
 }
-
-
-
 %>
-</body>
 
+<!--how personalize page --> 
+
+<h3> New books for<%=favlang %> </h3>
+<ul> 
+<li> blah blah</li>
+<li>blah blah blah</li>
+</ul>
+<h3>Latest news report on<%=favlang %> </h3>
+<ul> 
+<li>blah blah blah</li>
+<li>blah blah blah</li>
+</ul>
+
+<h3>Hot jobs on<%=favlang %> </h3>
+<ul> 
+<li>blah blah blah</li>
+<li>blah blah blah</li>
+</ul>
+
+<a href ="cookies-personalize-form.html"> Personalize this page </a>
+
+</body>
 
 </html>
