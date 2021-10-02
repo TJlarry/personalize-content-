@@ -1,3 +1,6 @@
+
+<%@page import="java.net.URLDecoder" %>;
+
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -23,7 +26,7 @@ body {
 	if (theCookie != null) {
 		for (Cookie tempcookie : theCookie) {
 			if ("myApp.favoriteLanguage".equals(tempcookie.getName())) {
-		favlang = tempcookie.getName();
+		favlang = URLDecoder.decode(tempcookie.getValue(),"UTF8");
 		break;
 			}
 		}
